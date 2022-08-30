@@ -1,23 +1,41 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import type { RouteRecordRaw } from 'vue-router';
+import type { App } from 'vue';
+import { createRouter, createWebHistory } from 'vue-router';
 
-const router = createRouter({
+// Modules
+import AuthRoute from './modules/auth';
+import EmployeeRoute from './modules/employee';
+import AdminRoute from './modules/admin';
+import ErrorRoute from './modules/errors';
+
+const routes: RouteRecordRaw[] = [
+  // Auth
+  {
+    path: '/auth',
+    name: 'Auth',
+    redirect: 'Login',
+    component: () => import('@/views/pages/AuthView.vue'),
+    children: [...AuthRoute],
+  },
+
+  // Main
+  {
+    path: '/',
+    name: 'Index',
+    redirect: { name: 'Employee' },
+    component: () => import('@/views/pages/IndexView.vue'),
+    children: [...EmployeeRoute, ...AdminRoute, ...ErrorRoute],
+  },
+];
+
+export const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    },
-    {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
-    }
-  ]
-})
+  routes,
+  scrollBehavior(to) {
+    return to.meta.scrollTop ? { top: 0, behavior: 'smooth' } : {};
+  },
+});
 
-export default router
+export const setupRouter = (app: App<Element>) => {
+  app.use(router);
+};
