@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-import { setupPinia } from './plugins/pinia';
+import { setupPinia } from '@/plugins/pinia';
 import { setupRouter } from './router';
 import { setupAntDesign } from '@/plugins/ant-design';
 import { setupVeeValidate } from '@/plugins/vee-validate';
