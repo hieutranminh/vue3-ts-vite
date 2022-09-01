@@ -1,4 +1,4 @@
-<template> Employee Editor </template>
+<template>Employee Editor</template>
 
 <script setup lang="ts"></script>
 

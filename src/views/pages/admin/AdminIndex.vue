@@ -4,11 +4,17 @@
       <a-button @click="navigate" type="primary">Create</a-button>
     </router-link>
 
-    <router-link :to="{ name: 'AdminEdit', params: { id: 1 } }" custom v-slot="{ navigate }">
+    <router-link
+      :to="{ name: 'AdminEdit', params: { id: 1 } }"
+      custom
+      v-slot="{ navigate }">
       <a-button @click="navigate" type="primary">Edit</a-button>
     </router-link>
 
-    <router-link :to="{ name: 'AdminDetail', params: { id: 1 } }" custom v-slot="{ navigate }">
+    <router-link
+      :to="{ name: 'AdminDetail', params: { id: 1 } }"
+      custom
+      v-slot="{ navigate }">
       <a-button @click="navigate" type="primary">Detail</a-button>
     </router-link>
 

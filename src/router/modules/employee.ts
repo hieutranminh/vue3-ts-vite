@@ -20,7 +20,10 @@ export default [
         component: () => import('@/views/pages/employee/EmployeeCreate.vue'),
         meta: {
           breadcrumb: [
-            { breadcrumbName: 'breadcrumb.employee', routeName: 'Employee' },
+            {
+              breadcrumbName: 'breadcrumb.employee',
+              routeName: 'Employee',
+            },
             { breadcrumbName: 'breadcrumb.employee_create' },
           ],
           title: 'title.employee',
@@ -35,7 +38,10 @@ export default [
         props: true,
         meta: {
           breadcrumb: [
-            { breadcrumbName: 'breadcrumb.employee', routeName: 'Employee' },
+            {
+              breadcrumbName: 'breadcrumb.employee',
+              routeName: 'Employee',
+            },
             { breadcrumbName: 'breadcrumb.employee_edit' },
           ],
           title: 'title.employee',
@@ -45,4 +51,4 @@ export default [
       },
     ],
   },
-];
+]

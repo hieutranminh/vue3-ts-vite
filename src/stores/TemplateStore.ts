@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia';
+import { defineStore } from 'pinia'
 
 export const useTemplateStore = defineStore('TemplateStore', {
   // State
@@ -9,4 +9,4 @@ export const useTemplateStore = defineStore('TemplateStore', {
 
   // Actions
   actions: {},
-});
+})

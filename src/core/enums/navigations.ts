@@ -19,4 +19,4 @@ export const NAVIGATIONS = [
     title: 'nav.resource_utilization',
     routeName: 'ResourceUtilization',
   },
-];
+]

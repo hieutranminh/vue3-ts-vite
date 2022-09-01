@@ -1,4 +1,4 @@
-<template> Base Title </template>
+<template>Base Title</template>
 
 <script setup lang="ts"></script>
 

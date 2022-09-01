@@ -23,4 +23,4 @@ export default [
       breadcrumb: [{ breadcrumbName: 'breadcrumb.notfound' }],
     },
   },
-];
+]

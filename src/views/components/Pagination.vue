@@ -1,4 +1,4 @@
-<template> Pagination </template>
+<template>Pagination</template>
 
 <script setup lang="ts"></script>
 

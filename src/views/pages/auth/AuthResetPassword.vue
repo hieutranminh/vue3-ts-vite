@@ -1,4 +1,4 @@
-<template> Reset Password </template>
+<template>Reset Password</template>
 
 <script setup lang="ts"></script>
 

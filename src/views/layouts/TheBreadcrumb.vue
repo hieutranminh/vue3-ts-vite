@@ -1,4 +1,4 @@
-<template> Breadcrumbs </template>
+<template>Breadcrumbs</template>
 
 <script setup lang="ts"></script>
 

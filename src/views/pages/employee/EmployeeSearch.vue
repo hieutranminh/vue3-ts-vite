@@ -1,4 +1,4 @@
-<template> Employee Search </template>
+<template>Employee Search</template>
 
 <script setup lang="ts"></script>
 

@@ -20,7 +20,10 @@ export default [
         component: () => import('@/views/pages/admin/AdminCreate.vue'),
         meta: {
           breadcrumb: [
-            { breadcrumbName: 'breadcrumb.admin', routeName: 'Admin' },
+            {
+              breadcrumbName: 'breadcrumb.admin',
+              routeName: 'Admin',
+            },
             { breadcrumbName: 'breadcrumb.admin_create' },
           ],
           title: 'admin-create',
@@ -35,7 +38,10 @@ export default [
         props: true,
         meta: {
           breadcrumb: [
-            { breadcrumbName: 'breadcrumb.admin', routeName: 'Admin' },
+            {
+              breadcrumbName: 'breadcrumb.admin',
+              routeName: 'Admin',
+            },
             { breadcrumbName: 'breadcrumb.admin_edit' },
           ],
           title: 'admin-edit',
@@ -50,7 +56,10 @@ export default [
         props: true,
         meta: {
           breadcrumb: [
-            { breadcrumbName: 'breadcrumb.admin', routeName: 'Admin' },
+            {
+              breadcrumbName: 'breadcrumb.admin',
+              routeName: 'Admin',
+            },
             { breadcrumbName: 'breadcrumb.admin_detail' },
           ],
           title: 'admin-detail',
@@ -60,4 +69,4 @@ export default [
       },
     ],
   },
-];
+]

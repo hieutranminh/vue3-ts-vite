@@ -1,4 +1,4 @@
-<template> Admin Editor </template>
+<template>Admin Editor</template>
 
 <script setup lang="ts"></script>
 

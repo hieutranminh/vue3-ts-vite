@@ -27,4 +27,4 @@ export const OptionLocale = [
     value: 'vi',
     label: 'VN',
   },
-];
+]

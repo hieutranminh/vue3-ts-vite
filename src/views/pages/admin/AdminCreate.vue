@@ -1,4 +1,4 @@
-<template> Admin Create </template>
+<template>Admin Create</template>
 
 <script setup lang="ts"></script>
 

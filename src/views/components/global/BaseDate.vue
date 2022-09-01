@@ -1,4 +1,4 @@
-<template> Base Date </template>
+<template>Base Date</template>
 
 <script setup lang="ts"></script>
 

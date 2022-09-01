@@ -1,4 +1,4 @@
-<template> Employee Create </template>
+<template>Employee Create</template>
 
 <script setup lang="ts"></script>
 
