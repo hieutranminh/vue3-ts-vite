@@ -1,4 +1,6 @@
 import {
+  MenuFoldOutlined,
+  MenuUnfoldOutlined,
   PlusOutlined,
   FilterOutlined,
   LogoutOutlined,
@@ -11,6 +13,8 @@ import {
 import type { App } from 'vue'
 
 export function setupAntDesignIcon(app: App<Element>) {
+  app.component('MenuFoldOutlined', MenuFoldOutlined)
+  app.component('MenuUnfoldOutlined', MenuUnfoldOutlined)
   app.component('PlusOutlined', PlusOutlined)
   app.component('FilterOutlined', FilterOutlined)
   app.component('LogoutOutlined', LogoutOutlined)
