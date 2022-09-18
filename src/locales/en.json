@@ -1,3 +1,6 @@
 {
-  "home": "Home"
+  "btn": {
+    "cancel": "Cancel",
+    "ok": "OK"
+  }
 }

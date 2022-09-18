@@ -24,7 +24,13 @@
   </section>
 
   <!--SEARCH-->
-  <section class="container">Search</section>
+  <section class="container">
+    Search
+    <Modal
+      :visible="showModal"
+      @ok="showModal = false"
+      @cancel="showModal = false" />
+  </section>
 
   <!--TABLE-->
   <section class="container">Table</section>
@@ -32,6 +38,10 @@
 
 <script setup lang="ts">
   import TheBreadcrumb from '@/views/layouts/TheBreadcrumb.vue'
+  import Modal from '@/views/components/modals/Modal.vue'
+  import { ref } from 'vue'
+
+  const showModal = ref(true)
 </script>
 
 <style lang="scss" scoped></style>
