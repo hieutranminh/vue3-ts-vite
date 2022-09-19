@@ -16,6 +16,7 @@ import {
   Table,
   Tag,
   Modal,
+  Form,
   message,
 } from 'ant-design-vue'
 import 'ant-design-vue/dist/antd.css'
@@ -39,5 +40,6 @@ export const setupAntDesign = (app: App<Element>) => {
   app.use(Table)
   app.use(Tag)
   app.use(Modal)
+  app.use(Form)
   app.config.globalProperties.$message = message
 }

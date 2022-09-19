@@ -10,7 +10,7 @@
         <template #icon>
           <FilterOutlined />
         </template>
-        {{ $t('btn.filter') }}
+        Filter
       </a-button>
 
       <!--Create-->
@@ -18,18 +18,39 @@
         <template #icon>
           <PlusOutlined />
         </template>
-        {{ $t('btn.import') }}
+        Import
       </a-button>
     </a-space>
   </section>
 
   <!--SEARCH-->
   <section class="container">
-    Search
-    <Modal
-      :visible="showModal"
-      @ok="showModal = false"
-      @cancel="showModal = false" />
+    <VeeForm
+      :initial-values="form"
+      @submit="handleLogin"
+      class="auth_container ant-form ant-form-vertical">
+      <!--email-->
+      <InputField
+        name="email"
+        rules="required|email|max:50"
+        size="large"
+        label="Email"
+        :maxlength="50">
+        <template v-slot:prefix>
+          <UserOutlined />
+        </template>
+      </InputField>
+
+      <!--Sign In-->
+      <a-button
+        class="sign-in"
+        type="primary"
+        html-type="submit"
+        size="large"
+        block>
+        Submit
+      </a-button>
+    </VeeForm>
   </section>
 
   <!--TABLE-->
@@ -38,10 +59,15 @@
 
 <script setup lang="ts">
   import TheBreadcrumb from '@/views/layouts/TheBreadcrumb.vue'
-  import Modal from '@/views/components/modals/Modal.vue'
-  import { ref } from 'vue'
+  import { reactive } from 'vue'
+  import InputField from '@/views/components/form/InputField.vue'
 
-  const showModal = ref(true)
+  const form = reactive({
+    email: '',
+  })
+  const handleLogin = () => {
+    console.log('login')
+  }
 </script>
 
 <style lang="scss" scoped></style>
