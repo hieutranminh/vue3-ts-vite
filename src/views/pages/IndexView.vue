@@ -7,7 +7,9 @@
 
     <a-layout :style="{ minHeight: '100%' }">
       <!--HEADER-->
-      <TheHeader @collapsed="collapsed = $event" :collapsed="collapsed" />
+      <TheHeader
+        @collapsed="collapsed = $event"
+        :collapsed="collapsed" />
 
       <a-layout-content :style="{ padding: '0 16px 16px' }">
         <router-view />

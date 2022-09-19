@@ -1,9 +1,15 @@
 <template>
   <a-layout-header class="layout-header">
     <div class="header-left">
-      <div @click="$emit('collapsed', !collapsed)" class="menu-toggle">
-        <menu-unfold-outlined v-if="collapsed" class="trigger" />
-        <menu-fold-outlined v-else class="trigger" />
+      <div
+        @click="$emit('collapsed', !collapsed)"
+        class="menu-toggle">
+        <menu-unfold-outlined
+          v-if="collapsed"
+          class="trigger" />
+        <menu-fold-outlined
+          v-else
+          class="trigger" />
       </div>
 
       <!--Locale switch-->
@@ -12,7 +18,9 @@
 
     <div class="header-right">
       <!--Dropdown optional-->
-      <a-dropdown :trigger="['click']" placement="bottomRight">
+      <a-dropdown
+        :trigger="['click']"
+        placement="bottomRight">
         <div>
           <span class="name">Hugh Jackman</span>
           <a-avatar
@@ -23,7 +31,9 @@
 
         <template #overlay>
           <a-menu>
-            <a-menu-item key="0" @click.prevent="handleLogout">
+            <a-menu-item
+              key="0"
+              @click.prevent="handleLogout">
               <LogoutOutlined />
               Logout
             </a-menu-item>

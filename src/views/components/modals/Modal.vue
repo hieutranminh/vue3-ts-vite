@@ -1,5 +1,7 @@
 <template>
-  <a-modal :visible="visible" @click="$emit('cancel')">
+  <a-modal
+    :visible="visible"
+    @click="$emit('cancel')">
     <template #title>
       <slot name="title">Basic Modal</slot>
     </template>
@@ -8,10 +10,16 @@
 
     <template #footer>
       <slot name="footer">
-        <a-button key="back" @click="$emit('cancel')">
+        <a-button
+          key="back"
+          @click="$emit('cancel')">
           {{ $t('btn.cancel') }}
         </a-button>
-        <a-button key="submit" type="primary" @click="$emit('ok')">
+
+        <a-button
+          key="submit"
+          type="primary"
+          @click="$emit('ok')">
           {{ $t('btn.ok') }}
         </a-button>
       </slot>

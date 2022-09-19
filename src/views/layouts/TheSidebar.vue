@@ -1,7 +1,9 @@
 <template>
   <div class="logo" />
 
-  <a-menu theme="dark" mode="inline">
+  <a-menu
+    theme="dark"
+    mode="inline">
     <a-menu-item key="1">
       <user-outlined />
       <span class="nav-text">nav 1</span>
